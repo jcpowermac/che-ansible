@@ -2,14 +2,14 @@
   "description": "Default Ansible Stack with Ansible 2.1",
   "tags": ["Python 2.7", "pip", "Ansible", "Git"],
   "scope": "advanced",
-  "id": "python-2.7",
-  "name": "Python 2.7",
+  "id": "ansible-2.1",
+  "name": "Ansible 2.1",
   "workspaceConfig": {
     "commands": [{
       "attributes": {
         "previewUrl": "http://${server.port.8080}"
       },
-      "commandLine": "cd ${current.project.path}",
+      "commandLine": "cd ${current.project.path} && ansible-playbook -vvv site.yml",
       "type": "custom",
       "name": "run"
     }],
