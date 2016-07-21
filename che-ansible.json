@@ -1,0 +1,54 @@
+{
+  "description": "Default Ansible Stack with Ansible 2.1",
+  "tags": ["Python 2.7", "pip", "Ansible", "Git"],
+  "scope": "advanced",
+  "id": "python-2.7",
+  "name": "Python 2.7",
+  "workspaceConfig": {
+    "commands": [{
+      "attributes": {
+        "previewUrl": "http://${server.port.8080}"
+      },
+      "commandLine": "cd ${current.project.path}",
+      "type": "custom",
+      "name": "run"
+    }],
+    "name": "default",
+    "links": [],
+    "environments": [{
+      "machineConfigs": [{
+        "name": "default",
+        "limits": {
+          "ram": 0
+        },
+        "type": "docker",
+        "links": [],
+        "dev": true,
+        "servers": [],
+        "source": {
+          "type": "dockerfile",
+          "location": "stub"
+        },
+        "envVariables": {}
+      }],
+      "name": "default"
+    }],
+    "defaultEnv": "default",
+    "projects": []
+  },
+  "creator": "ide",
+  "source": {
+    "origin": "jcpowermac/eclipse-che-ansible",
+    "type": "image"
+  },
+  "components": [{
+      "version": "2.1",
+      "name": "Ansible"
+    },{
+    "version": "2.7.11",
+    "name": "Python"
+  }, {
+    "version": "8.1.1",
+    "name": "pip"
+  }]
+}
