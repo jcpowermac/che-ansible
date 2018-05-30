@@ -1,3 +1,6 @@
+[![Docker Repository on Quay](https://quay.io/repository/jcallen/che-linchpin/status "Docker Repository on Quay")](https://quay.io/repository/jcallen/che-linchpin)
+
+
 #### Ansible for Eclipse Che
 
 This project includes a Dockerfile (recipe) and stack to be included into Eclipse Che
