@@ -5,7 +5,7 @@ EXPOSE 8080 8000 9191
 ENV REQUIRED_PKGS="pv python-psycopg2 python-virtualenv libffi-devel openssl-devel libyaml-devel libcurl-devel gmp-devel libselinux-python make gcc redhat-rpm-config libxml2-python libxslt-python libxml2-devel python-devel"
 
 ENV OPTIONAL_PKGS="zsh vim vim-jedi vim-powerline vim-pysmell vim-syntastic vim-syntastic-python"
-ENV PIP_PKGS="pip linchpin ovirt-engine-sdk-python ansible ara"
+ENV PIP_PKGS="pip psycopg2 linchpin ovirt-engine-sdk-python ansible ara"
 
 USER root
 
