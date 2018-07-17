@@ -6,6 +6,7 @@ ENV REQUIRED_PKGS="pv python-psycopg2 python-virtualenv libffi-devel openssl-dev
 
 ENV OPTIONAL_PKGS="zsh vim vim-jedi vim-powerline vim-pysmell vim-syntastic vim-syntastic-python"
 ENV PIP_PKGS="pip psycopg2 linchpin ovirt-engine-sdk-python ansible ara"
+ENV PYCURL_SSL_LIBRARY=openssl
 
 USER root
 
@@ -22,7 +23,7 @@ USER user
 RUN virtualenv /home/user/venv
 
 RUN source /home/user/venv/bin/activate && \
-    pip install pycurl --upgrade --global-option="--with-openssl" && \
+    pip install pycurl --install-option="--with-openssl" && \
     pip install ${PIP_PKGS} --upgrade && \
     /home/user/install.sh >/dev/null 2>&1 && \
     ln -s /usr/share/vim/vimfiles/ /home/user/.vim
